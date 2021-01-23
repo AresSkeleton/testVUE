@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script  src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="app1">
+        <input v-model='message'></p>
+            <button v-on:click="addToDo">add</button>
+            <button v-on:click="SaveFile">Save File</button>
+        
+        
+            <ol>
+                <todo-task
+                    v-for="task in todos"
+                    v-bind:task="task"
+                    v-bind:key="task.id"
+                    ></todo-task>
+            </ol>
+            
+        </div>
+        <script src="/javascripts/todo.js"></script>
+    </body>
+</html>
